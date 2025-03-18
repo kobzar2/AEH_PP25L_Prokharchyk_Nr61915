@@ -2,18 +2,17 @@ package pl.pp;
 import java.io.InputStream;
 import java.util.Scanner;
 public class mojaDrugaAplikacja {
-    public static void main(String[] args) {
-        int x = 10;
-        Scanner scanner = new Scanner(System.in);
 
-        var
-                result = x;
-        System.out.println("x = " + result);
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
 
-        result = x * 2;
-        System.out.println("x * 2 = " + result);
+            System.out.print("Podaj swój wiek w latach: ");
+            int wiekWLatach = scanner.nextInt();
 
-        result = x * x;
-        System.out.println("x * x = " + result);
+            long wiekWSekundach = (long) wiekWLatach * 365 * 24 * 60 * 60;
+
+            System.out.println("Twój wiek w sekundach wynosi: " + wiekWSekundach);
+
+            scanner.close();
+        }
     }
-}
