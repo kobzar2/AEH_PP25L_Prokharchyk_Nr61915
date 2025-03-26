@@ -20,9 +20,9 @@ public class mojaCzwartaAplikacja {
                 int kwadrat = i * i;
                 sumaKwadratow += kwadrat;
             }
-            System.out.println(square1);
-            System.out.println(square2);
-            System.out.println(+sumaKwadratow);
+            System.out.println("Kwadrat min: " +square1);
+            System.out.println("Kwadrat max: " +square2);
+            System.out.println("Kwadrat od min do max: "+sumaKwadratow);
         }
     }
 }
