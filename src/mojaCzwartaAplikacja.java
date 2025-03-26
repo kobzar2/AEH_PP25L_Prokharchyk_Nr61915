@@ -8,6 +8,10 @@ public class mojaCzwartaAplikacja {
             System.out.print("Podaj min i max limity:");
             int min = scanner.nextInt();
             int max = scanner.nextInt();
+            if (min == max) {
+                System.out.println("Koniec");
+                break;
+            }
             if (min >= max) {
                 System.out.print("Max powinien byc wiekszy, niz Min. Sproboj ponownie.");
                 break;
