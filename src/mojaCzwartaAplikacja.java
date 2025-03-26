@@ -4,7 +4,7 @@ public class mojaCzwartaAplikacja {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            int k=1;
+            int k=2;
             System.out.print("Podaj min i max limity:");
             int min = scanner.nextInt();
             int max = scanner.nextInt();
