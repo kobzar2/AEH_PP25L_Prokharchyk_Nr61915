@@ -2,7 +2,6 @@
 import java.util.Scanner;
 public class mojaCzwartaAplikacja {
     public static void main(String[] args) {
-        mojaCzwartaAplikacja app = new mojaCzwartaAplikacja();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.print("Podaj min i max limity:");
