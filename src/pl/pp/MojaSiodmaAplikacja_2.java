@@ -10,7 +10,7 @@ class mojaSiodmaAplikacja_2 {
   person1.beYounger(); // Zmniejsz wiek o 1
   System.out.println("Wiek po odmłodzeniu: " + person1.age);
 
-  person1.setAddress("al. Niepodległości 50, Kraków");
+  person1.setAddress("al. Niepodległości 50, Kraków" );
   System.out.println("Nowy adres: " + person1.getAddress());
  }
 }
