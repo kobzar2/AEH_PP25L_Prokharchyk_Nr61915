@@ -1,63 +1,56 @@
 package pl.pp;
 
 public class Person {
- public String forename;
- public String surname;
- public int age;
- public String address; // Dodane pole adres
- public int birthYear;  // Dodane pole rok urodzenia
+ // pola (atrybuty) klasy określającej obiekt "Person" (jego parametry/cechy)
+         private String forename; // pole przechowujące cechę imię
+ private String surname; // pole przechowujące cechę nazwisko
+ private int age; // pole przechowujące cechę wiek
 
- public Person() {
-  // Konstruktor domyślny
+         /**
+ * Konstruktor domyślny - element inicjalizujący pola obiektu podczas jego tworzenia
+ * (jeśli sami nie podamy żadnych parametrów)
+ */
+         public Person() {
+}
+         /**
+ * Konstruktor z trzema parametrami, które możemy podać przy jego tworzeniu,
+ * wykorzystanie "this" pozwala m.in. na skorzystanie z tych samych nazw
+ * pól i zmiennych
+*/
+         public Person(String forename, String surname, int age) {
+ this.forename = forename;
+ this.surname = surname;
+ this.age = age;
  }
 
- public Person(String initForename, String initSurname, int initAge, String initAddress, int initBirthYear) {
-  forename = initForename;
-  surname = initSurname;
-  age = initAge;
-  address = initAddress;
-  birthYear = initBirthYear;
+         // metody klasy określające akcje możliwe do wykonania przez obiekt
+         public void hiToAll(){
+ System.out.println("Nazywam się " + forename + " " + surname + ". " + "Mam " + age + " lat.");
  }
 
- public void hiToAll() {
-  System.out.println("Nazywam się " + forename + " " + surname + ". Mam " + age + " lat.");
-  System.out.println("Mieszkam pod adresem: " + address + ". Urodziłem/am się w roku: " + birthYear + ".");
+         // przykładowa metoda growOld, która zwiększa dany wiek obiektu o jeden za każdym jej wywołaniem
+         public int growOld(int age){
+ this.age += age;
+ return age;
  }
 
- // Zmodyfikowana metoda growOld() przyjmuje argument increaseAge
- public int growOld(int increaseAge) {
-  age = age + increaseAge;
-  return age;
+         //tzw. "gettery" i "settery" pól prywatnych
+         public String getForename(){
+ return forename;
  }
-
- public String getName() {
-  return forename;
+ public void setForename(String forename){
+ this.forename = forename;
  }
-
- public void setName(String nameToSet) {
-  forename = nameToSet;
+ public String getSurname(){
+ return surname;
  }
-
- // Dodana metoda beYounger() zmniejszająca wiek o 1
- public int beYounger() {
-  age = age - 1;
-  return age;
+ public void setSurname(String surname){
+ this.surname = surname;
  }
-
- // Dodane metody do ustawiania i pobierania nowych pól (opcjonalnie, ale dobra praktyka)
- public String getAddress() {
-  return address;
- }
-
- public void setAddress(String addressToSet) {
-  address = addressToSet;
- }
-
- public int getBirthYear() {
-  return birthYear;
- }
-
- public void setBirthYear(int birthYearToSet) {
-  birthYear = birthYearToSet;
+ public int getAge(){
+ return age;
+}
+ public void setAge(int age){
+ this.age = age;
  }
 }
