@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
-public class mojaDwunastaAplikacja {
+public class mojaTrzynastaAplikacja {
     public static void main(String[] args) {
         // Bardzo przydatne - wskazuje bieżący katalog, w którym pracujemy i z którego uruchomiono kod main()
         String userDirectory = System.getProperty("user.dir");
